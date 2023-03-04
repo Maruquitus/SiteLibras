@@ -27,6 +27,9 @@
 
 .yt {
     background: linear-gradient(to bottom left, rgb(39, 39, 39), rgb(44, 34, 40));
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(150, 22, 65);
     box-shadow: 1px 0px 10px rgba(34, 34, 34, 0.116);
     border-radius: 10px;
 
@@ -263,7 +266,16 @@ p {
     
         button {
             width: 22em;
-            font-size: small;
+            height: 4em;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 20px;
+        }
+
+        footer {
+            font-size: 12px;
         }
     
         .conteúdo {

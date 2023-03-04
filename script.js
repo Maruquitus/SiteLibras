@@ -1,10 +1,3 @@
- 
-var tag = document.createElement('script')
- 
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName('script')[0]
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
-
 
 var módulos = [
     {"título":"O Alfabeto", "id":"sntDyFlilGE"},
@@ -13,18 +6,19 @@ var módulos = [
     {"título":"Expressões", "id":"sntDyFlilGE"}
 ]
 
+var vistos;
 var players = [];
-function onYouTubePlayerAPIReady() {
-    for (let i = 0; i < módulos.length; i++) {
-        const e = módulos[i];
-        players.push(new YT.Player('player' + i.toString(), {
-            height: '315',
-            width: '512',
-            videoId: módulos[i]["id"]
-          }));
-        
+for (let i = 0; i < módulos.length; i++) {
+    const e = módulos[i];
+    players.push(videojs("vid" + (i+1).toString(),{
+        techOrder: ["youtube"],
+        sources: [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=" + e["id"]}]
+    }));
+
     }
-}
+
+    
+
 
 function getCookie(cname) {
     let name = cname + "=";
@@ -47,8 +41,6 @@ var checar = function() {
         let at = coll[ii];
 
         var content = at.nextElementSibling;
-
-        console.log(this.enabled);
     
         if (at.disabled == true){
             content.style.maxHeight = null;
@@ -65,27 +57,28 @@ var checar = function() {
 var coll = document.getElementsByClassName("collapsible");
 var i;
 var vistos = parseInt(getCookie("modulosvistos"));
+if (vistos != NaN) {
+    vistos = 1;
+    document.cookie = "modulosvistos=1;";
+}
 
 for (i = 0; i < coll.length; i++) {
   
-  let atual = coll[i];
-  if (vistos != "")
-  {
+    let atual = coll[i];
     if (i+1 > vistos) {
-    
+
         atual.disabled = true;
         atual.firstElementChild.innerHTML = 'Módulo ' + (i+1).toString() + " - " +  módulos[i]["título"] +  '  <i class="fa-solid fa-lock"></i>';
-      }
+        }
     else {
         atual.firstElementChild.innerHTML = 'Módulo ' + (i+1).toString() + " - " +  módulos[i]["título"];
     }
-  }
-  else {
-    vistos = 1;
-    document.cookie = "modulosvistos=1; SameSite=Strict; Secure";
-  }
 
   //coll[i].addEventListener("click", checar);
+}
+
+function teste() {
+    console.log("Terminou!");
 }
 
 checar();
