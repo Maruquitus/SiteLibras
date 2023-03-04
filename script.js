@@ -13,29 +13,17 @@ var módulos = [
     {"título":"Expressões", "id":"sntDyFlilGE"}
 ]
 
-var player;
-var player2;
+var players = [];
 function onYouTubePlayerAPIReady() {
-  player = new YT.Player('player1', {
-    height: '315',
-    width: '512',
-    videoId: módulos[0]["id"]
-  });
-  player2 = new YT.Player('player2', {
-    height: '315',
-    width: '512',
-    videoId: '4eH4GWWWhC4'
-  });
-  player = new YT.Player('player3', {
-    height: '315',
-    width: '512',
-    videoId: '4eH4GWWWhC4'
-  });
-  player2 = new YT.Player('player4', {
-    height: '315',
-    width: '512',
-    videoId: '4eH4GWWWhC4'
-  });
+    for (let i = 0; i < módulos.length; i++) {
+        const e = módulos[i];
+        players.push(new YT.Player('player' + i.toString(), {
+            height: '315',
+            width: '512',
+            videoId: módulos[i]["id"]
+          }));
+        
+    }
 }
 
 function getCookie(cname) {

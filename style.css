@@ -14,11 +14,11 @@
     opacity: 1;
     display: grid;
     align-items: center;
-    border-radius: 20px;
+    border-radius: 0px 0px 20px 20px;
     row-gap: 25px;
     margin: 1% 5%;
-    box-shadow: 10px;
     padding: 10% 10%;
+    box-shadow: 1px 0px 10px rgba(34, 34, 34, 0.116);
 
     background: linear-gradient(to bottom left, rgb(53, 40, 46, 0.95), rgb(53, 11, 36, 0.95));
 
@@ -80,8 +80,6 @@
     position: absolute;
     color:rgb(255, 255, 255);
 }
-
-
 
 button:disabled {
     color: gray;
@@ -169,32 +167,35 @@ p {
         transition-property: transform, margin, width, height, size, font-family;
     }
 
+    .conteúdo {
+        transition: 0.5s;
+        transition-property: transform, margin, width, height, size, font-family;
+    }
+
     img {
         display: none;
     }
 
     .players {
-        margin-top: 10%;
-        left: 0; 
-        right: 0; 
-        margin-left: auto; 
-        margin-right: auto; 
-        width: 75%;
+        margin-top: 90px;
+        padding: 0;
+        padding-bottom: 20px;
+        width: 90%;
     }
 
     button {
-        margin-top: 8%;
         width: 30em;
     }
 
+    button#primeiro {
+        margin-top: 20px;
+    }
+
     .conteúdo {
-        left: 0; 
-        right: 0; 
-        margin-left: auto; 
-        margin-right: auto; 
         width: 25em;
         height: 22em;
     }
+    
     .descrição {
         bottom: 0;
         font-size: medium;
@@ -205,9 +206,70 @@ p {
         grid-column: 2;
         width: 21.33em;
         height: 12em;
+        transform: translate(0.2em);
     }
 
     footer {
         font-size: small;
     }
+
+    @media screen and (width < 475px) {
+        button {
+            width: 26em;
+        }
+    
+        .conteúdo {
+            width: 22em;
+        }
+        .yt {
+            transform: translate(-0.3em);
+            margin: auto;
+            width: 20em;
+            height: 11.25em;
+        }
+    }
+
+    @media screen and (width < 420px) {
+        .players {
+            width: 90%;
+        }
+    
+        button {
+            width: 24em;
+        }
+    
+        .conteúdo {
+            width: 20em;
+        }
+        .descrição {
+            text-align: center;
+        }
+        .yt {
+            width: 16em;
+            height: 9em;
+        }
+
+    }
+
+    @media screen and (width < 400px) {
+        #title {
+            font-size: 24px;
+        }
+
+        .players {
+            width: 90%;
+            margin-top: 74px;
+        }
+    
+        button {
+            width: 22em;
+            font-size: small;
+        }
+    
+        .conteúdo {
+            width: 18em;
+        }
+
+    }
+
 }
