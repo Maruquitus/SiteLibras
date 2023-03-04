@@ -83,7 +83,7 @@ for (i = 0; i < coll.length; i++) {
   let atual = coll[i];
   if (vistos != "")
   {
-    if (i+1 >= vistos) {
+    if (i+1 > vistos) {
     
         atual.disabled = true;
         atual.firstElementChild.innerHTML = 'Módulo ' + (i+1).toString() + " - " +  módulos[i]["título"] +  '  <i class="fa-solid fa-lock"></i>';
