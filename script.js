@@ -76,7 +76,7 @@ var checar = function() {
 
 var coll = document.getElementsByClassName("collapsible");
 var i;
-var vistos = getCookie("modulosvistos");
+var vistos = parseInt(getCookie("modulosvistos"));
 
 for (i = 0; i < coll.length; i++) {
   
@@ -94,7 +94,7 @@ for (i = 0; i < coll.length; i++) {
   }
   else {
     vistos = 1;
-    document.cookie = "modulosvistos=1;";
+    document.cookie = "modulosvistos=1; SameSite=Strict; Secure";
   }
 
   //coll[i].addEventListener("click", checar);
