@@ -1,0 +1,155 @@
+.título {
+    position: absolute;
+    text-align: center;
+    vertical-align: center;
+    background: linear-gradient(to top right, rgb(31, 31, 31), rgb(39, 39, 39));
+    box-shadow: 1px 0px 20px rgba(20, 20, 20, 0.308);
+    color: white;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.players {
+    opacity: 1;
+    display: grid;
+    align-items: center;
+    border-radius: 20px;
+    row-gap: 25px;
+    margin: 1% 5%;
+    box-shadow: 10px;
+    padding: 10% 10%;
+
+    background: linear-gradient(to bottom left, rgb(53, 40, 46, 0.95), rgb(53, 11, 36, 0.95));
+
+}
+
+
+.player {
+    grid-column: 1;
+    padding: 15px;
+    width: 512px;
+    height: 315px;
+}
+
+.conteúdo {
+    display: grid;
+    column-gap: 10px;
+    text-align: left;
+    background: linear-gradient(to bottom left, rgb(37, 37, 37), rgb(39, 12, 28));
+
+    border-radius: 0px 0px 10px 10px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    max-height: 0px;
+
+    color: rgb(241, 26, 109);
+
+    z-index: -1;
+
+}
+
+.descrição {
+    margin-top: auto;
+    margin-bottom: auto;
+    grid-column: 2;
+    padding: 10px;
+}
+
+.professor {
+    display: none;
+    position: absolute;
+    color:rgb(255, 255, 255);
+}
+
+
+
+button:disabled {
+    color: gray;
+    cursor: not-allowed;
+    transition: color 0.25s linear;
+}
+
+button:enabled {
+    color: white;
+}
+
+button:enabled:hover {
+    transition: 0.25s;
+    border-radius: 10px;
+}
+
+
+button {
+    position: relative;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    color: white;
+    border: none;
+    box-shadow: 1px 0px 10px rgba(34, 34, 34, 0.116);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to top right, rgb(156, 37, 83), rgb(219, 42, 110));
+
+    align-items:center;
+    justify-content:center;
+    z-index: 0;
+}
+
+body {
+    background: linear-gradient(to bottom left, rgb(26, 26, 26), rgb(26, 10, 19));
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+
+    align-items: center;
+    text-align: center;
+}
+
+footer {
+    background: none;
+    color: rgb(54, 54, 54);
+
+    text-align: center;
+
+    width: 100%;
+    z-index: 2;
+}
+
+img {
+    display: block;
+    position: absolute;
+    left: 10px; 
+    top: 10px;
+    height: 80%;
+}
+
+h1 {    
+    font-family: 'Kanit', sans-serif;
+    font-weight: lighter;
+    font-size: 1.75em;
+}
+
+#title {
+    font-size: 30px;
+}
+
+p {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.25em;
+    font-weight: lighter;
+}
+
+@media screen and (orientation: portrait){
+    button {
+        transition: 0.5s;
+        margin-top: 8%;
+        width: 40em;
+    }
+    .conteúdo {
+        width: 700px;
+        height: 20em;
+    }
+    iframe {
+        width: 50%;
+    }
+}
