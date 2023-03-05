@@ -257,12 +257,16 @@ p {
             font-size: 24px;
         }
 
+        .módulo {
+            width: 100%;
+        }
+
         .players {
             margin-top: 74px;
         }
     
         button {
-            width: 22em;
+            width: 21.6em;
             height: 4em;
             padding: 0;
         }

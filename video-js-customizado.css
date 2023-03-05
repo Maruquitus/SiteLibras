@@ -1,6 +1,6 @@
 /* Change all text and icon colors in the player. */
 .vjs-matrix.video-js {
-    color: rgb(247, 199, 228);
+    color: rgb(241, 26, 109);
   }
   
   /* Change the border of the big play button. */
@@ -15,7 +15,7 @@
   .vjs-matrix .vjs-volume-level,
   .vjs-matrix .vjs-play-progress,
   .vjs-matrix .vjs-slider-bar {
-    color: rgb(255, 225, 245);
+    color: rgb(241, 26, 109);
   }
 
   .vjs-matrix.video-js {
