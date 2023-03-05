@@ -7,6 +7,9 @@ var módulos = [
 ]
 
 var vistos;
+
+
+
 var players = [];
 for (let i = 0; i < módulos.length; i++) {
     const e = módulos[i];
