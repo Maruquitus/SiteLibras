@@ -183,7 +183,7 @@ p {
         margin-top: 90px;
         padding: 0;
         padding-bottom: 20px;
-        width: 90%;
+        width: 100%;
     }
 
     button {
@@ -233,9 +233,6 @@ p {
     }
 
     @media screen and (width < 420px) {
-        .players {
-            width: 90%;
-        }
     
         button {
             width: 24em;
@@ -260,7 +257,6 @@ p {
         }
 
         .players {
-            width: 90%;
             margin-top: 74px;
         }
     
