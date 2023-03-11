@@ -1,0 +1,156 @@
+.título {
+    position: absolute;
+    text-align: center;
+    vertical-align: center;
+    background: linear-gradient(to top right, rgb(31, 31, 31), rgb(39, 39, 39));
+    box-shadow: 1px 0px 20px rgba(20, 20, 20, 0.308);
+    color: white;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+p {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.25em;
+}
+
+body {
+    background: linear-gradient(to bottom left, rgb(26, 26, 26), rgb(26, 10, 19));
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+
+    align-items: center;
+    text-align: center;
+}
+
+footer {
+    background: none;
+    color: rgb(54, 54, 54);
+
+    text-align: center;
+
+    width: 100%;
+    z-index: 2;
+}
+
+img {
+    display: block;
+    top: 10px;
+    left: 10px;
+    position: absolute;
+    height: 80%;
+}
+
+.links {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    text-align: right;
+}
+
+#title {
+    font-size: 30px;
+}
+
+h1 {    
+    font-family: 'Kanit', sans-serif;
+    font-weight: lighter;
+    font-size: 1.75em;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(219, 42, 110);
+    transition: color 0.25s ease-in-out;
+}
+
+a#desativado {
+    pointer-events: none;
+    cursor: pointer;
+    color: rgb(252, 60, 133);
+}
+
+a:hover {
+    color: rgb(252, 60, 133);
+}
+
+h2 {
+    color: rgb(82, 82, 82);
+}
+#íconemobile {
+    display: none;
+}
+
+
+@media screen and (orientation: portrait){
+
+    * {
+        left: 0; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto; 
+        transition: 0.5s;
+        transition-property: transform, margin, width, height, size, font-family, font-size;
+    }
+
+    #title {
+        font-size: 27px;
+    }
+
+    .links {
+        position: fixed;
+        text-align: center;
+        background: linear-gradient(to top right, rgb(27, 27, 27), rgb(34, 34, 34));
+        box-shadow: 1px 0px 20px rgba(20, 20, 20, 0.308);
+        color: white;
+
+        bottom: 0;
+        top: auto;
+        font-size: 15px;
+        border-radius: 10px 10px 0px;
+        width: 100%;
+        z-index: 1;
+    }
+
+    footer {
+        height: 100px;
+        font-size: small;
+    }
+
+    img#logo {
+        display: none;
+    }
+
+    #íconemobile {
+        display: inline;
+        color: rgb(233, 71, 133);
+    }
+
+    @media screen and (width < 475px) {
+
+    }
+
+    @media screen and (width < 420px) {
+
+    }
+
+    @media screen and (width < 400px) {
+        .links {
+            font-size: 13px;
+        }
+        #title {
+            font-size: 20px;
+        }
+        h1 {
+            font-size: 20px;
+        }
+
+        footer {
+            height: 115px;
+            font-size: 12px;
+        }
+
+    }
+
+}
