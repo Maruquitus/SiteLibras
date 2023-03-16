@@ -121,18 +121,21 @@ input:focus {
 
     .searchBar {
         margin: 0;
-        margin-top: 75px;
-        top: 400px;
+        top: 0;
+        bottom: 0;
     }
 
     input {
         background: rgba(14, 13, 14, 0.75) url("lupa.png") no-repeat left;
         width: 20px;
         position: fixed;
+        margin: 0px;
         margin-left: 5px;
-        padding-right: 0;
+        padding-right: 0px;
         background-size: 30px;
         background-position: 5px;
+        bottom: 0;
+        margin-bottom: 60px;
     }
 
     input:focus {
@@ -146,6 +149,7 @@ input:focus {
         padding: 0;
         padding-top: 20px;
         padding-bottom: 20px;
+        padding-right: 5px;
         margin-left: 0;
         margin-right: 0;
         width: 100%;
@@ -169,6 +173,7 @@ input:focus {
             height: 50px;
             background-size: 40px;
             background-position: 5px;
+            margin-bottom: 70px;
         }
     }
 
