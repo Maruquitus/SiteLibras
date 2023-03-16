@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+
     <link rel="stylesheet" href="static/style/defaultStyle.css">
     <link rel="stylesheet" href="static/style/styleDict.css">
 
@@ -14,6 +15,7 @@
     <link type="text/css" rel="stylesheet" href="static/style/video-js.min.css" />
     <link type="text/css" rel="stylesheet" href="static/style/video-js-customizado.css"/>
     <script src="static/script/scriptDict.js"></script>
+    <script src="static/script/lockOrientation.js"></script>
 
     <link rel="shortcut icon" href="static/img/favicon.ico" type="image/x-icon">
 
@@ -26,10 +28,10 @@
     <nav class="título">
         <img src="static/img/logo.png" alt="" id="logo">
         <p></p>
-        <h1 id="title"><i class="fa-solid fa-hands"></i>  Libras ao alcance de todos</h1>
+        <h1 id="title"><a href="index.html" id="titul"><i class="fa-solid fa-hands"></i>  Libras ao alcance de todos</a></h1>
         <div class="links">
             <h2>
-                <i class="fa-solid fa-person-chalkboard" id="íconemobile"></i></i> <a href="index.html">Aulas</a>
+                <i class="fa-solid fa-person-chalkboard" id="íconemobile"></i></i> <a href="aulas.html">Aulas</a>
                 |
                 <i class="fa-solid fa-book-open-reader" id="íconemobile"></i> <a href="dict.html" id="atual">Dicionário de Sinais</a>
             </h2>
@@ -43,7 +45,7 @@
         </form>
     </div>
 
-    <div class=vídeos id="vídeos">
+    <div class=vídeos id="vídeos" style="min-height: 768px;">
         <h1 id="mensagem">Nenhum resultado encontrado :/</h1>
         <div class="vídeo">
             <h1>Título 1</h1>

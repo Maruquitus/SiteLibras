@@ -1,0 +1,32 @@
+.container {
+    opacity: 1;
+    display: block;
+}
+
+#subtítulo {
+    margin-top: 40px;
+    color:rgb(206, 162, 184);
+}
+
+.títulos {
+    text-align: left;
+    color:rgb(206, 35, 123);
+}
+
+#descrição { 
+    text-align: justify;
+    text-justify: newspaper;
+    color:rgb(209, 89, 151);
+}
+@media screen and (orientation: portrait){
+    .container {
+        margin: 0px;
+    }
+
+    @media screen and (width < 400px) {
+        .títulos {
+            font-size: 30px;
+        }
+    }
+}
+

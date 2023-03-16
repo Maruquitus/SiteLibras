@@ -3,7 +3,8 @@ var módulos = [
     {"título":"O Alfabeto", "id":"sntDyFlilGE"},
     {"título":"Cumprimentos", "id":"sntDyFlilGE"},
     {"título":"Emoções", "id":"sntDyFlilGE"},
-    {"título":"Expressões", "id":"sntDyFlilGE"}
+    {"título":"Expressões", "id":"sntDyFlilGE"},
+    {"título":"Objetos", "id":"sntDyFlilGE"}
 ]
 
 var vistos;
@@ -21,6 +22,8 @@ for (let i = 0; i < módulos.length; i++) {
     }
 
     
+
+
 function getCookie(cname) {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);

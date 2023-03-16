@@ -8,6 +8,21 @@
     left: 0;
     top: 0;
     width: 100%;
+    z-index: 3;
+}
+
+.container {
+    opacity: 1;
+    display: grid;
+    align-items: center;
+    border-radius: 0px 0px 20px 20px;
+    row-gap: 25px;
+    margin: 1% 5%;
+    padding: 10% 10%;
+    box-shadow: 1px 0px 10px rgba(34, 34, 34, 0.116);
+
+    background: linear-gradient(to bottom left, rgb(53, 40, 46, 0.95), rgb(53, 11, 36, 0.95));
+
 }
 
 p {
@@ -65,6 +80,12 @@ a {
     transition: color 0.25s ease-in-out;
 }
 
+a#titul {
+    text-decoration: none;
+    color: white;
+
+}
+
 a#atual {
     pointer-events: none;
     cursor: pointer;
@@ -100,6 +121,7 @@ h2 {
 
     .links {
         position: fixed;
+        overflow: hidden;
         text-align: center;
         background: linear-gradient(to top right, rgb(27, 27, 27), rgb(34, 34, 34));
         box-shadow: 1px 0px 20px rgba(20, 20, 20, 0.308);
@@ -137,7 +159,7 @@ h2 {
 
     @media screen and (width < 400px) {
         .links {
-            font-size: 13px;
+            font-size: 14px;
         }
         #title {
             font-size: 20px;
@@ -145,6 +167,7 @@ h2 {
         h1 {
             font-size: 20px;
         }
+
 
         footer {
             height: 115px;

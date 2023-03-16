@@ -9,6 +9,7 @@ body {
     z-index: 2;
     margin-top: 1.75em;
     top: 0;
+    z-index: 2;
 }
 
 input {
@@ -82,7 +83,9 @@ input:focus {
 
     z-index: 1;
 
-    transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition-property: margin, transform;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .vídeo:hover {
@@ -125,6 +128,10 @@ input:focus {
         bottom: 0;
     }
 
+    .links {
+        z-index: 4;
+    }
+
     input {
         background: rgba(14, 13, 14, 0.75) url("lupa.png") no-repeat left;
         width: 20px;
@@ -142,7 +149,6 @@ input:focus {
         background: rgb(29, 27, 29) url("lupa.png") no-repeat left;
         background-position: 10px;
         background-size: 20px;
-        padding-right: 5px;
     }
 
     .vídeos {
@@ -178,8 +184,6 @@ input:focus {
             padding-right: 5px;
         }
     }
-
-
 
     @media screen and (width < 400px) {
         .vídeo {
