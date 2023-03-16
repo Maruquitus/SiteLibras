@@ -61,11 +61,11 @@ h1 {
 
 a {
     text-decoration: none;
-    color: rgb(219, 42, 110);
+    color: rgb(179, 35, 90);
     transition: color 0.25s ease-in-out;
 }
 
-a#desativado {
+a#atual {
     pointer-events: none;
     cursor: pointer;
     color: rgb(252, 60, 133);
@@ -110,7 +110,7 @@ h2 {
         font-size: 15px;
         border-radius: 10px 10px 0px;
         width: 100%;
-        z-index: 1;
+        z-index: 2;
     }
 
     footer {

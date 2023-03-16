@@ -21,8 +21,6 @@ for (let i = 0; i < módulos.length; i++) {
     }
 
     
-
-
 function getCookie(cname) {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
