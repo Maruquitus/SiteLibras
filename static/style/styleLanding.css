@@ -3,6 +3,10 @@
     display: block;
 }
 
+.links {
+    z-index: 5;
+}
+
 #subtítulo {
     margin-top: 40px;
     color:rgb(206, 162, 184);
