@@ -73,7 +73,7 @@
 }
 
 button:disabled {
-    color: rgb(156, 106, 136);
+    color: gray;
     cursor: not-allowed;
     transition: color 0.25s linear;
 }
