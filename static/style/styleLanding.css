@@ -7,6 +7,16 @@
     z-index: 5;
 }
 
+#logoestado {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    display: none;
+    width: 12.5em;
+    -webkit-filter: drop-shadow(2px 2px 4px #50202f);
+    filter: drop-shadow(2px 2px 4px #50202f);
+}
+
 #subtítulo {
     margin-top: 40px;
     color:rgb(206, 162, 184);
@@ -25,6 +35,11 @@
     .container {
         margin: 0px;
     }
+
+    #logoestado {
+        display: block;
+    }
+
 
     @media screen and (width < 400px) {
         .títulos {
