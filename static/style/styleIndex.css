@@ -87,6 +87,10 @@ button:enabled:hover {
     border-radius: 10px;
 }
 
+.links {
+    z-index: 5;
+}
+
 
 button {
     position: relative;
