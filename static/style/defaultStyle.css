@@ -8,7 +8,7 @@
     left: 0;
     top: 0;
     width: 100%;
-    z-index: 3;
+    z-index: 5;
 }
 
 .container {
@@ -77,7 +77,7 @@ h1 {
 a {
     text-decoration: none;
     color: rgb(179, 35, 90);
-    transition: color 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out;
 }
 
 a#titul {
@@ -93,7 +93,7 @@ a#atual {
 }
 
 a:hover {
-    color: rgb(252, 60, 133);
+    transform: scale(102%);
 }
 
 h2 {
@@ -102,6 +102,61 @@ h2 {
 #íconemobile {
     display: none;
 }
+
+#load-div-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    pointer-events: none;
+    transition: opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    background: rgb(53, 11, 36);
+    z-index: 2;
+    
+}
+
+#load-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+
+}
+
+
+#loader {
+    
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: inline-block;
+    
+    background: linear-gradient(0deg, rgba(61, 0, 26, 0.2) 33%, #f70052 100%);
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+#loader::after {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    background: rgb(53, 11, 36);
+}
+@keyframes rotation {
+    0% { transform: rotate(0deg) }
+    100% { transform: rotate(360deg)}
+} 
 
 
 @media screen and (orientation: portrait){
@@ -132,7 +187,7 @@ h2 {
         font-size: 15px;
         border-radius: 10px 10px 0px;
         width: 100%;
-        z-index: 2;
+        z-index: 6;
     }
 
     footer {
@@ -177,3 +232,4 @@ h2 {
     }
 
 }
+

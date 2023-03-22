@@ -1,6 +1,6 @@
 /* Change all text and icon colors in the player. */
 .vjs-matrix.video-js {
-    color: rgb(241, 26, 109);
+    color: rgb(230, 117, 140);
   }
   
   /* Change the border of the big play button. */
@@ -10,12 +10,17 @@
     margin: auto;
     border-color: #333333;
   }
+
+  .vjs-matrix:focus .vjs-big-play-button:focus {
+    display: none;
+  }
+
   
   /* Change the color of various "bars". */
   .vjs-matrix .vjs-volume-level,
   .vjs-matrix .vjs-play-progress,
   .vjs-matrix .vjs-slider-bar {
-    color: rgb(241, 26, 109);
+    color: rgb(230, 117, 140);
   }
 
   .vjs-matrix.video-js {

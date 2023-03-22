@@ -14,8 +14,6 @@
 
     <link type="text/css" rel="stylesheet" href="static/style/video-js.min.css" />
     <link type="text/css" rel="stylesheet" href="static/style/video-js-customizado.css"/>
-    <script src="static/script/scriptDict.js"></script>
-    <script src="static/script/lockOrientation.js"></script>
 
     <link rel="shortcut icon" href="static/img/favicon.ico" type="image/x-icon">
 
@@ -46,89 +44,35 @@
     </div>
 
     <div class=vídeos id="vídeos" style="min-height: 768px;">
+        <div id="load-div-container">
+            <div id="load-div">
+                <span id="loader"></span>
+            </div>
+        </div>
         <h1 id="mensagem">Nenhum resultado encontrado :/</h1>
         <div class="vídeo">
             <h1>Título 1</h1>
             <div class="yt">
-                
+                <video
+                    id="vid1"
+                    class="vjs-matrix video-js"
+                    controls
+                    width="512" height="315">
+                    </video>
             </div>
-        </div>
-        <div class="vídeo">
-            <h1>Título 2</h1>
-            <div class="yt">
-                
-            </div>
-        </div>
-        <div class="vídeo">
-            <h1>Título 3</h1>
-            <div class="yt">
-                
-            </div>
-        </div>
 
-        <div class="vídeo">
-            <h1>Título 4</h1>
-            <div class="yt">
-                
-            </div>
         </div>
-        <div class="vídeo">
-            <h1>Título 5</h1>
-            <div class="yt">
-                
-            </div>
-        </div>
-        <div class="vídeo">
-            <h1>Título 6</h1>
-            <div class="yt">
-                
-            </div>
-        </div>
-
-        <div class="vídeo">
-            <h1>Título 7</h1>
-            <div class="yt">
-                
-            </div>
-        </div>
-        <div class="vídeo">
-            <h1>Título 8</h1>
-            <div class="yt">
-                
-            </div>
-        </div>
-        <div class="vídeo">
-            <h1>Título 9</h1>
-            <div class="yt">
-                
-            </div>
-        </div>
-
-        <div class="vídeo">
-            <h1>Título 10</h1>
-            <div class="yt">
-                
-            </div>
-        </div>
-        <div class="vídeo">
-            <h1>Título 11</h1>
-            <div class="yt">
-                
-            </div>
-        </div>
-        <div class="vídeo">
-            <h1>Título 12</h1>
-            <div class="yt">
-                
-            </div>
-        </div>
-
-        
+        <a onclick="aumentarQnt();" href="#!" id="mostrarMais">Mostrar mais</a>     
     </div>
 
     <footer class="autor">
         <p>Libras ao alcance de todos | Site desenvolvido por Marcos Sousa</p> 
     </footer>
+
     
+
+    <script src="static/script/video.min.js"></script>
+    <script src="static/script/Youtube.min.js"></script>
+    <script src="static/script/scriptDict.js"></script>
 </body>
 </html>

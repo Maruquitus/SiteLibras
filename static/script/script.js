@@ -8,22 +8,38 @@ var módulos = [
 ]
 
 var vistos;
-
-
-
+var carregados = 0;
+var load = document.getElementById("load-div-container");
 var players = [];
+document.body.style = "overflow: hidden";
+load.style = "opacity: 1; pointer-events:auto;";
 for (let i = 0; i < módulos.length; i++) {
     const e = módulos[i];
-    players.push(videojs("vid" + (i+1).toString(),{
-        techOrder: ["youtube"],
-        sources: [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=" + e["id"]}]
-    }));
-
-    }
+    v = videojs("vid" + (i+1).toString(),{
+      techOrder: ["youtube"],
+      sources: [{ "type": "video/youtube", "src": "http://www.youtube.com/watch?v=" + e["id"]}]
+  });
+    v.on('ready', function() {
+      carregados++;
+      if (carregados >= módulos.length) {
+        document.getElementById("load-div-container").style = "opacity: 0; pointer-events:none;";
+        document.body.style = "";
+      }
+    })
+    v.on('ended', function() {
+      let Id = this.id();
+      console.log(Id)
+      let mod = parseInt(Id.charAt(Id.length-1))+1;
+      vistos = mod;
+      document.cookie = "modulosvistos=" + mod.toString() + ";";
+      this.exitFullscreen();
+      this.hasStarted(false);
+      update();
+  });
+  players.push(v);
+  }
 
     
-
-
 function getCookie(cname) {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
@@ -60,29 +76,27 @@ var checar = function() {
 
 var coll = document.getElementsByClassName("collapsible");
 var i;
-var vistos = parseInt(getCookie("modulosvistos"));
-if (vistos != NaN) {
-    vistos = 1;
-    document.cookie = "modulosvistos=1;";
-}
 
-for (i = 0; i < coll.length; i++) {
+function update() {
+  var vistos = parseInt(getCookie("modulosvistos"));
+  if (vistos == NaN) {
+      vistos = 1;
+      document.cookie = "modulosvistos=1;";
+  }
+  for (i = 0; i < coll.length; i++) {
   
     let atual = coll[i];
     if (i+1 > vistos) {
-
         atual.disabled = true;
         atual.firstElementChild.innerHTML = 'Módulo ' + (i+1).toString() + " - " +  módulos[i]["título"] +  '  <i class="fa-solid fa-lock"></i>';
         }
     else {
+        atual.disabled = false;
         atual.firstElementChild.innerHTML = 'Módulo ' + (i+1).toString() + " - " +  módulos[i]["título"];
     }
-
-  //coll[i].addEventListener("click", checar);
+  
+  }
+  checar();
 }
 
-function teste() {
-    console.log("Terminou!");
-}
-
-checar();
+update();
