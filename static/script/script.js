@@ -79,7 +79,7 @@ var i;
 
 function update() {
   var vistos = parseInt(getCookie("modulosvistos"));
-  if (vistos == NaN) {
+  if (isNaN(vistos)) {
       vistos = 1;
       document.cookie = "modulosvistos=1;";
   }
