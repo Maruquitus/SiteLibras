@@ -80,6 +80,10 @@ a {
     transition: transform 0.25s ease-in-out;
 }
 
+h2 a {
+    font-size: 14pt;
+}
+
 a#titul {
     text-decoration: none;
     color: white;
