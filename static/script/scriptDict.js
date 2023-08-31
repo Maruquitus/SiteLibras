@@ -1,70 +1,14 @@
 var vídeos = [
-  {"título":"Título 1", "id":"UvWb6tBUx6w"},
-  {"título":"Título 2", "id":"UvWb6tBUx6w"},
-  {"título":"Título 3", "id":"UvWb6tBUx6w"},
-  {"título":"Título 4", "id":"UvWb6tBUx6w"},
-  {"título":"Título 5", "id":"UvWb6tBUx6w"},
-  {"título":"Título 6", "id":"UvWb6tBUx6w"},
-  {"título":"Título 7", "id":"UvWb6tBUx6w"},
-  {"título":"Título 8", "id":"UvWb6tBUx6w"},
-  {"título":"Título 9", "id":"UvWb6tBUx6w"},
-  {"título":"Título 10", "id":"UvWb6tBUx6w"},
-  {"título":"Título 2", "id":"UvWb6tBUx6w"},
-  {"título":"Título 3", "id":"UvWb6tBUx6w"},
-  {"título":"Título 4", "id":"UvWb6tBUx6w"},
-  {"título":"Título 5", "id":"UvWb6tBUx6w"},
-  {"título":"Título 6", "id":"UvWb6tBUx6w"},
-  {"título":"Título 7", "id":"UvWb6tBUx6w"},
-  {"título":"Título 8", "id":"UvWb6tBUx6w"},
-  {"título":"Título 9", "id":"UvWb6tBUx6w"},
-  {"título":"Título 2", "id":"UvWb6tBUx6w"},
-  {"título":"Título 3", "id":"UvWb6tBUx6w"},
-  {"título":"Título 4", "id":"UvWb6tBUx6w"},
-  {"título":"Título 5", "id":"UvWb6tBUx6w"},
-  {"título":"Título 6", "id":"UvWb6tBUx6w"},
-  {"título":"Título 7", "id":"UvWb6tBUx6w"},
-  {"título":"Título 8", "id":"UvWb6tBUx6w"},
-  {"título":"Título 9", "id":"UvWb6tBUx6w"},
-  {"título":"Título 2", "id":"UvWb6tBUx6w"},
-  {"título":"Título 3", "id":"UvWb6tBUx6w"},
-  {"título":"Título 4", "id":"UvWb6tBUx6w"},
-  {"título":"Título 5", "id":"UvWb6tBUx6w"},
-  {"título":"Título 6", "id":"UvWb6tBUx6w"},
-  {"título":"Título 7", "id":"UvWb6tBUx6w"},
-  {"título":"Título 8", "id":"UvWb6tBUx6w"},
-  {"título":"Título 9", "id":"UvWb6tBUx6w"},
-  {"título":"Título 2", "id":"UvWb6tBUx6w"},
-  {"título":"Título 3", "id":"UvWb6tBUx6w"},
-  {"título":"Título 4", "id":"UvWb6tBUx6w"},
-  {"título":"Título 5", "id":"UvWb6tBUx6w"},
-  {"título":"Título 6", "id":"UvWb6tBUx6w"},
-  {"título":"Título 7", "id":"UvWb6tBUx6w"},
-  {"título":"Título 8", "id":"UvWb6tBUx6w"},
-  {"título":"Título 9", "id":"UvWb6tBUx6w"},
-  {"título":"Título 2", "id":"UvWb6tBUx6w"},
-  {"título":"Título 3", "id":"UvWb6tBUx6w"},
-  {"título":"Título 4", "id":"UvWb6tBUx6w"},
-  {"título":"Título 5", "id":"UvWb6tBUx6w"},
-  {"título":"Título 6", "id":"UvWb6tBUx6w"},
-  {"título":"Título 7", "id":"UvWb6tBUx6w"},
-  {"título":"Título 8", "id":"UvWb6tBUx6w"},
-  {"título":"Título 9", "id":"UvWb6tBUx6w"},
-  {"título":"Título 2", "id":"UvWb6tBUx6w"},
-  {"título":"Título 3", "id":"UvWb6tBUx6w"},
-  {"título":"Título 4", "id":"UvWb6tBUx6w"},
-  {"título":"Título 5", "id":"UvWb6tBUx6w"},
-  {"título":"Título 6", "id":"UvWb6tBUx6w"},
-  {"título":"Título 7", "id":"UvWb6tBUx6w"},
-  {"título":"Título 8", "id":"UvWb6tBUx6w"},
-  {"título":"Título 9", "id":"UvWb6tBUx6w"},
-  {"título":"Título 2", "id":"UvWb6tBUx6w"},
-  {"título":"Título 3", "id":"UvWb6tBUx6w"},
-  {"título":"Título 4", "id":"UvWb6tBUx6w"},
-  {"título":"Título 5", "id":"UvWb6tBUx6w"},
-  {"título":"Título 6", "id":"UvWb6tBUx6w"},
-  {"título":"Título 7", "id":"UvWb6tBUx6w"},
-  {"título":"Título 8", "id":"UvWb6tBUx6w"},
-  {"título":"Título 9", "id":"UvWb6tBUx6w"},
+  {"título":"Carne", "id":"d_fJFrGK9MY"},
+  {"título":"Macarrão", "id":"NYK9CjWWuoA"},
+  {"título":"Arroz", "id":"W6zKHOehYXg"},
+  {"título":"Cadeira", "id":"wQisFR1Cx9Q"},
+  {"título":"Banheiro", "id":"bn9rHjxHzT4"},
+  {"título":"Edifício", "id":"WhnxixasRa8"},
+  {"título":"Geladeira", "id":"mXCI88N1cY4"},
+  {"título":"Casa", "id":"bK_mTNPCklo"},
+  {"título":"Amor", "id":"k4Cl6C39sLg"},
+  {"título":"Ajudar", "id":"HGDa9xeXoqQ"},
 ]
 
 function sleep(ms) {
@@ -147,8 +91,10 @@ var carregados = 0;
 var load = document.getElementById("load-div-container");
 
 async function update(fromSearch=0) {  
-  document.body.style = "overflow: hidden";
-  load.style = "opacity: 1; pointer-events:auto;";
+  if (!fromSearch) document.body.style = "overflow: hidden";
+  if (!fromSearch) load.style = "opacity: 1; pointer-events:auto;";
+  
+  //document.getElementById("load-div-container").style = "opacity: 0; pointer-events:none;";
   await sleep(350);
     for (let i = 0; i < vídeos.length; i++) {
       if (i>0 && fromSearch == 0)
@@ -174,6 +120,7 @@ async function update(fromSearch=0) {
         v.on('ready', function() {
           console.log(carregados);
           if (carregados >= mostrar) {
+            document.body.style = "overflow: visible";
             document.getElementById("load-div-container").style = "opacity: 0; pointer-events:none;";
             document.body.style = "";
           }
@@ -182,18 +129,16 @@ async function update(fromSearch=0) {
           players.push(v);
         }
   
-  if (vídeos.length > mostrar+1) {
-    mostrarMais.style = "display: block;"
-  }
-  else {
-    mostrarMais.style = "display: none;"
-  }
+  mostrarMais.style = "display: none;"
   }
 }
 
 function aumentarQnt() {
   console.log(mostrar);
   mostrar += 9;
+  if (mostrar > vídeos.length) {
+    mostrar = vídeos.length
+  }
   update();
 }
 

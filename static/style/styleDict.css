@@ -4,6 +4,7 @@ body {
 }
 
 .searchBar {
+    width: 50px;
     position: absolute;
     margin-left: 100px;
     z-index: 2;

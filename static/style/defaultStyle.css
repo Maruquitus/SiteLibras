@@ -236,4 +236,12 @@ h2 {
     }
 
 }
+.desk {
+    display: none;
+}
 
+
+@media screen and (min-width: 600px)  {
+    .mobile-break { display: none; }
+    .desk {display: inline;}
+}
